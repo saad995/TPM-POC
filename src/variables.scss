@@ -1,0 +1,39 @@
+// Colors
+$primary: #009a5e;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+
+// Swatches
+$swatch-100: #f5f5f5;
+$swatch-200: #eeeeee;
+$swatch-300: #e0e0e0;
+$swatch-400: #bdbdbd;
+$swatch-500: #9e9e9e;
+$swatch-600: #757575;
+$swatch-700: #616161;
+$swatch-800: #424242;
+$swatch-900: #212121;
+
+// Font Sizes
+$h1-font-size: 2.5rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.75rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: 1rem;
+
+// Spacing
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3)
+);

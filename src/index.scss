@@ -1,0 +1,133 @@
+@import "@progress/kendo-theme-bootstrap/dist/all.scss";
+@import "bootstrap/scss/bootstrap.scss";
+@import "variables.scss";
+
+@font-face {
+    font-family: "Montreal Regular";
+    src: url("./Assets/Fonts/MONTREAL-REGULAR.TTF") format("truetype");
+}
+
+@font-face {
+    font-family: "Montreal Bold";
+    src: url("./Assets/Fonts/MONTREAL-BOLD.TTF") format("truetype");
+}
+
+@font-face {
+    font-family: "Proxima Regular";
+    src: url("./Assets/Fonts/PROXIMANOVA-REGULAR.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Proxima Semibold";
+    src: url("./Assets/Fonts/PROXIMA\ NOVA\ SEMIBOLD.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Proxima Light";
+    src: url("./Assets/Fonts/PROXIMANOVA-LIGHT.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Proxima Thin";
+    src: url("./Assets/Fonts/PROXIMA\ NOVA\ THIN.ttf") format("truetype");
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+    font-family: "Proxima Regular" !important;
+    color: #595959 !important;
+    line-height: normal !important;
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 0;
+    }
+
+    h1 {
+        font-family: "Montreal Bold";
+    }
+
+    h2 {
+        font-family: "Montreal Regular";
+    }
+
+    h3 {
+        font-family: "Proxima Semibold";
+    }
+
+    .display-xl {
+        font-family: "Montreal Bold";
+        font-size: 80px !important;
+    }
+
+    .display-lg {
+        font-family: "Montreal Bold";
+        font-size: 70px !important;
+    }
+
+    .display-md {
+        font-family: "Montreal Bold";
+        font-size: 56px !important;
+    }
+
+    .display-sm {
+        font-family: "Montreal Bold";
+        font-size: 42px !important;
+    }
+
+    .headline {
+        font-size: 24px !important;
+        font-family: "Montreal Regular";
+    }
+
+    .title {
+        font-size: 1rem !important;
+    }
+
+    span, p, td {
+        font-size: 0.75rem !important;
+    }
+
+    .base-lg {
+        font-size: 0.875rem !important;
+    }
+
+    .btn, .k-textbox, .k-label, .k-button {
+        font-size: 0.75rem !important;
+    }
+}
+
+// Custom Grid Styles
+.purpleGrid {
+    .k-grid-header {
+        padding-right: 0 !important;
+        background-color: #3E5277;
+        
+        .k-header {
+            background-color: #3E5277;
+            color: white;
+            border-width: 0;
+        }
+    }
+
+    .k-column-resizer {
+        background-color: #2D3F61;
+        width: 0.15em;
+    }
+}
+
+.gridRound {
+    .k-grid {
+        border-radius: 5px;
+
+        .k-grid-header .k-grid-header-wrap {
+            border-radius: 5px 5px 0px 0px;
+        }
+
+        .k-pager-wrap {
+            border-radius: 0px 0px 5px 5px;
+        }
+    }
+}
