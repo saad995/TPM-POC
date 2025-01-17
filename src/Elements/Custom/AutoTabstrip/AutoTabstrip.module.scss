@@ -1,0 +1,308 @@
+//Class for the tabstrip that is programmatically controlled
+.AutoTabs {
+    :global {
+        .k-step-text {
+            overflow: unset !important;
+        }
+
+        //Class to modify the whole tab row
+        .k-tabstrip-items {
+            overflow-x: hidden;
+            scroll-snap-type: x mandatory;
+            overflow-y: hidden;
+            position: sticky !important;
+            top: 0;
+            background-color: white;
+            z-index: 1;
+            
+            pointer-events: none;
+
+            //Class to modify the background of each tab
+            span {
+                color: lightgray;
+            }
+        }
+
+        //Class to modify hover effect of each tab item
+        .k-tabstrip-items:hover {
+            scroll-snap-align: center;
+        }
+
+        //Class to remove border from each tab content
+        .k-content {
+            border: none !important;
+            overflow-x: hidden !important;
+            padding: 0 !important;
+        }
+
+        //Class to modify the active tab
+        .k-tabstrip-items > .k-state-active {
+            border-left: none !important;
+            border-right: none !important;
+            border-top: none !important;
+            border-bottom: 2px solid #404443 !important;
+            transition: 0.5s;
+            span {
+                color: #009a5e !important;
+                transition: 0.5s;
+            }
+            span::before{
+                content: unset;
+            }
+        }
+
+        //Class to modify the normal state of each tabstrip item
+        .k-tabstrip-items > .k-state-default {
+            span {
+                color: #595959;
+            }
+        }
+
+        //Class to remove any click event from each tab
+        [role="tab"]:hover {
+            pointer-events: none;
+        }
+    }
+}
+
+.ManualTabs {
+    :global {
+        .k-step-text {
+            overflow: unset !important;
+        }
+
+        //Class to modify the whole tab row
+        .k-tabstrip-items {
+            overflow-x: hidden;
+            scroll-snap-type: x mandatory;
+            overflow-y: hidden;
+            position: sticky !important;
+            top: 0;
+            background-color: white;
+            z-index: 1;
+          
+
+            //Class to modify the background of each tab
+            span {
+                color: lightgray;
+            }
+        }
+
+        //Class to modify hover effect of each tab item
+        .k-tabstrip-items:hover {
+            scroll-snap-align: center;
+        }
+
+        //Class to remove border from each tab content
+        .k-content {
+            border: none !important;
+            overflow-x: hidden !important;
+            padding: 0 !important;
+        }
+
+        //Class to modify the active tab
+        .k-tabstrip-items > .k-state-active {
+            border-left: none !important;
+            border-right: none !important;
+            border-top: none !important;
+            border-bottom: 2px solid #009a5e !important;
+            transition: 0.5s;
+            span {
+                color: #009a5e !important;
+                transition: 0.5s;
+            }
+           span::before{
+               visibility: hidden;
+           }
+        }
+
+        .k-tabstrip-items > .k-state-active::before{
+            visibility:visible;
+        }
+
+        //Class to modify the normal state of each tabstrip item
+        .k-tabstrip-items > .k-state-default {
+            span {
+                color: #595959;
+            }
+        }
+    }
+}
+
+
+
+.verticalAutoTabs {
+
+    :global {
+        .stepper-container {
+            li > a {
+                max-width: 20em !important;
+            }
+        }
+
+        .text-wrap {
+            display: flex;
+            flex-direction: row;
+            color: #3f4d5c;
+        }
+        .k-icon {
+            color: #3f4d5c;
+        }
+
+        .k-step-text {
+            overflow: unset !important;
+        }
+
+        .k-tabstrip {
+            height: 100%;
+            width: 100%;
+        }
+
+        .k-tabstrip-items {
+            overflow-x: hidden;
+            scroll-snap-type: x mandatory;
+            overflow-y: hidden;
+            position: sticky !important;
+            top: 0;
+            background-color: white;
+            z-index: 1;
+           
+            pointer-events: none;
+            width: 20% !important;
+        }
+
+        .k-content.k-state-active {
+            display: flex;
+            flex-direction: column;
+            // min-height: 78vh;
+            
+        }
+
+        .k-tabstrip-items:hover {
+            scroll-snap-align: center;
+        }
+
+        .k-tabstrip-top {
+            margin-top: 0;
+        }
+
+        .k-tabstrip-top > .k-tabstrip-items {
+            span {
+                color: lightgray;
+            }
+        }
+
+        .k-tabstrip > .k-content {
+            border: none !important;
+            overflow-x: hidden !important;
+            padding: 0 !important;
+        }
+
+        .k-tabstrip-items .k-item {
+            color: inherit;
+            font-size: 16px !important;
+        }
+
+        .k-tabstrip-items > .k-state-active {
+            border-left: none !important;
+            border-right: 4px solid #009a5e !important;
+            border-top: none !important;
+            border-bottom: none !important;
+            border-radius: 0 !important;
+            background-color: #eee !important;
+            span {
+                color: #009a5e !important;
+            }
+        }
+
+        [role="tab"]:hover {
+            pointer-events: none;
+        }
+    }
+}
+
+
+
+.verticalManualTabs {
+    height: 100%;
+    :global {
+        .stepper-container {
+            li > a {
+                max-width: 20em !important;
+            }
+        }
+
+        .text-wrap {
+            display: flex;
+            flex-direction: row;
+            color: #3f4d5c;
+        }
+        .k-icon {
+            color: #3f4d5c;
+        }
+
+        .k-step-text {
+            overflow: unset !important;
+        }
+
+        .k-tabstrip {
+            height: 100%;
+            width: 100%;
+        }
+
+        .k-tabstrip-items {
+            overflow-x: hidden;
+            scroll-snap-type: x mandatory;
+            overflow-y: hidden;
+            position: sticky !important;
+            top: 0;
+            background-color: white;
+            z-index: 1;
+           
+            width: 20% !important;
+        }
+
+        .k-content.k-state-active {
+            display: flex;
+            flex-direction: column;
+            // min-height: 78vh;
+        }
+
+        .k-tabstrip-items:hover {
+            scroll-snap-align: center;
+        }
+
+        .k-tabstrip-top {
+            margin-top: 0;
+        }
+
+        .k-tabstrip-top > .k-tabstrip-items {
+            span {
+                color: lightgray;
+            }
+        }
+
+        .k-tabstrip > .k-content {
+            border: none !important;
+            overflow-x: hidden !important;
+            padding: 0 !important;
+        }
+
+        .k-tabstrip-items .k-item {
+            color: inherit;
+            font-size: 16px !important;
+        }
+
+        .k-tabstrip-items > .k-state-active {
+            border-left: none !important;
+            border-right: 4px solid #009a5e !important;
+            border-top: none !important;
+            border-bottom: none !important;
+            border-radius: 0 !important;
+            background-color: #eee !important;
+            span {
+                color: #009a5e !important;
+            }
+        }
+    }
+}

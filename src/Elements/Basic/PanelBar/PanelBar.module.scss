@@ -1,0 +1,40 @@
+.panelBar {
+    :global {
+        .k-item {
+            .k-link.k-state-selected {
+                background-color: #009a5e !important;
+            }
+            .k-link{
+            background-color: #009a5e !important;
+            color:white;
+            }
+        }
+
+        .k-item:nth-of-type(1) {
+            // .k-link:nth-of-type(1) {
+            //     border-top-left-radius: 0.5rem !important;
+            //     border-top-right-radius: 0.5rem !important;
+            // }
+
+            border-top-left-radius: 0.5rem !important;
+            border-top-right-radius: 0.5rem !important;
+        }
+        .k-item:nth-last-of-type(1) {
+            
+            // .k-link:nth-of-type(1) {
+            //     border-bottom-left-radius: 0.5rem;
+            //     border-bottom-right-radius: 0.5rem;
+            // }
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+        }
+
+        .k-item:nth-last-of-type(1)[aria-expanded="true"] {
+            .k-link:nth-of-type(1){
+            border-bottom-left-radius: unset !important;
+            border-bottom-right-radius: unset !important;
+            }
+        }
+    }
+    border-radius: 0.5rem !important;
+}

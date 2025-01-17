@@ -1,0 +1,145 @@
+.imgThumbnail {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    :global {
+        .close-icon {
+            display: none;
+            position: absolute;
+            right: -20px;
+            top: -10px;
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:active {
+                cursor: pointer;
+                background: rgb(204, 204, 204);
+            }
+        }
+
+        .image {
+            width: 100%;
+            height: 150px;
+        }
+
+        .description-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.75);
+            .description {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: white;
+            }
+        }
+    }
+
+    &:hover {
+        :global {
+            .close-icon {
+                display: block;
+            }
+        }
+    }
+}
+
+.documentHistoryContainer {
+    :global {
+        .k-tabstrip-items {
+            border: none;
+            background-color: #fafafa;
+            overflow-y: auto;
+            overflow-x: hidden;
+            max-height: 353px;
+            .k-item {
+                padding: 1rem;
+                background-color:#009a5e !important;
+                border-bottom: 1px solid lightgray;
+                border-radius: 0 !important;
+                .k-link {
+                    align-items: center;
+                    flex-direction: column;
+                    border: none;
+                    color: rgba(0, 0, 0, 0.75);
+                }
+                .k-link::before {
+                    content: "Acted On";
+                    color: #6c757d;
+                }
+            }
+
+            .k-item.k-state-active {
+                .k-link {
+                    color: #fafafa;
+                }
+
+                .k-link::before {
+                    color: #fafafa;
+                }
+                border-right: 1px solid green !important;
+                border-radius: 0;
+            }
+            .k-item.k-state-default {
+                .k-link {
+                    color: #009a5e
+                }
+
+                .k-link::before {
+                    color: #009a5e
+                }
+                background-color: #fafafa!important;
+                border-right: 1px solid #fafafa !important;
+                border-radius: 0;
+            }
+
+            .k-item:hover {
+                background-color: #f6f6f6;
+            }
+
+            .k-item:active {
+                background-color: #067449 !important;
+                -moz-box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
+                -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+                box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}
+
+.tabContainerMobile {
+    :global {
+        .k-tabstrip-items {
+            overflow-x: auto;
+            overflow-y: auto;
+            position: relative;
+            .k-item {
+                padding-top: 0.5rem !important;
+                padding-bottom: 0.5rem !important;
+                margin-bottom: unset !important;
+            }
+
+            .k-item.k-state-active {
+                border-right: none !important;
+                border-top: none !important;
+                border-bottom: 1px solid green !important;
+
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+.thumbnailContainer {
+    min-width: 150px !important;
+    max-width: 180px !important;
+}
+
+.customButton { 
+    width: fit-content;
+    height: 100%;
+    padding: 15px;
+}

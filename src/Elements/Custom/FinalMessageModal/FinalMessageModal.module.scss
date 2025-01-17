@@ -1,0 +1,81 @@
+.finalMessageDialog{
+    text-align: center;
+    input{
+        width:100%;
+    }
+
+    .k-window-content{
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .k-window-title{
+       white-space: normal;
+       text-align: left;
+       font-size:14px;
+       margin-right: 10px;
+      // color: $sub-text-color;
+       // opacity: 0;
+    }
+
+   
+        .k-button{
+           
+            padding: 0.75rem 0;
+            font-size: 14px;
+            width:100%;
+        }
+        .k-button:last-child{
+            background: #009A5E;
+            color: white;
+            
+        }
+        .k-button:last-child:hover{
+            background: #028b50;
+            
+            
+        }
+        border-style: none;
+    
+
+    .k-window-titlebar{
+       // border-style: none;
+       background: rgba(240, 240, 240, 0.39);
+    }
+
+    .k-form .k-form-fieldset{
+        padding:20px !important;
+        margin: 0 auto;
+       overflow: hidden;
+    }
+
+  
+}
+
+
+.finalMessageDialog{
+div[role=dialog]{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 0;
+    box-shadow: 0px 4px 36px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    p{
+        margin: 0 0 2rem 0;
+        text-align: center;
+       
+    }
+}
+}
+
+@media (min-width: 768px) {
+    .finalMessageDialog{
+        div[role="dialog"] {
+            max-width: 20vw !important;
+        }
+    }
+}

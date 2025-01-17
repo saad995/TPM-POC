@@ -1,0 +1,17 @@
+#prepare nginx
+FROM nginx:1.16.0-alpine
+
+ARG ARG_REACT_APP_WEBOC_SITE
+ENV REACT_APP_WEBOC_SITE=$ARG_REACT_APP_WEBOC_SITE
+
+COPY ./build/  /usr/share/nginx/html/app/tpm
+RUN chmod -R 755 /usr/share/nginx/html/
+COPY ./certs/  /etc/nginx/ssl/
+RUN rm /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/
+COPY dev.psw.gov.pk.conf /etc/nginx/sites-available/
+RUN mkdir /etc/nginx/sites-enabled/
+RUN ln -s /etc/nginx/sites-available/dev.psw.gov.pk.conf /etc/nginx/sites-enabled/
+
+#fire up nginx
+CMD ["nginx","-g","daemon off;"]

@@ -1,0 +1,51 @@
+.k-icon.k-i-close {
+    display: none !important;
+}
+
+
+.layout{
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'menu header header header header header''menu breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb''menu main main main main main''menu footer footer footer footer footer';
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: auto 1fr;
+}
+
+.OkButton{
+    background: #009a5e ;
+   width: 70px;
+   height:  25px ;
+   border-radius:  0px ;
+   border:  1px solid ;
+   border-color:  #009a5e ;
+   color:  White ;
+   margin-bottom:  10px ;
+   margin-right:  10px ;
+   font-size:  14px ;
+}
+
+.OkButton:hover{    background: #028b50 ;
+    border-color:  #028b50 ;
+
+}
+
+.CancelButton{
+    background: #009a5e ;
+   width: 70px;
+   height:  25px ;
+   border-radius:  0px ;
+   border:  1px solid ;
+   border-color:  #009a5e ;
+   color:  White ;
+   margin-bottom:  10px ;
+   margin-right:  10px ;
+   font-size:  14px ;
+}
+
+
+.CancelButton:hover{   
+    background: #028b50 ;
+    border-color:  #028b50 ;
+
+}

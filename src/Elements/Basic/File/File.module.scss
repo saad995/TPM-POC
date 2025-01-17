@@ -1,0 +1,52 @@
+.imgThumbnail {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    :global {
+        .close-icon {
+            display: none;
+            position: absolute;
+            right: -20px;
+            top: -10px;
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:active {
+                cursor: pointer;
+                background: rgb(204, 204, 204);
+            }
+        }
+
+        .k-icon.k-i-close {
+            display: flex !important;
+        }
+
+        .image {
+            width: 100%;
+            height: 150px;
+        }
+
+        .description-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.75);
+            .description {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: white;
+            }
+        }
+    }
+
+    &:hover {
+        :global {
+            .close-icon {
+                display: block;
+            }
+        }
+    }
+}

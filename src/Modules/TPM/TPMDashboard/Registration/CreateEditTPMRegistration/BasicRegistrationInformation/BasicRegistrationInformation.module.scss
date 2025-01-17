@@ -1,0 +1,10 @@
+.separator{
+    border-bottom:1px dashed #dee2e6;
+}
+.multiSelect {
+    :global {
+        .k-input {
+        width: 160px;
+        }
+    }
+}

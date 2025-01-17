@@ -1,0 +1,106 @@
+
+.logo {
+    height: calc(2rem + 0.22737vw);
+    width: auto;
+}
+
+.cancelText {
+    cursor: pointer;
+}
+
+.tabs {
+    .stepper-container {
+        li > a {
+            max-width: 20em !important;
+        }
+    }
+
+    .k-icon {
+        color: #3f4d5c;
+    }
+
+    .k-step-text {
+        overflow: unset !important;
+    }
+
+    .k-tabstrip-items {
+        overflow-x: hidden;
+        scroll-snap-type: x mandatory;
+        overflow-y: hidden;
+        position: sticky !important;
+        top: 0;
+        background-color: white;
+        z-index: 1;
+        scroll-behavior: smooth;
+
+        pointer-events: none;
+    }
+
+    .k-tabstrip-items:hover {
+        scroll-snap-align: center;
+    }
+
+    .k-tabstrip-top > .k-tabstrip-items {
+        span {
+            color: lightgray;
+        }
+    }
+
+    .k-tabstrip > .k-content {
+        border: none !important;
+        overflow-x: hidden !important;
+        padding: 0 !important;
+    }
+
+    .k-tabstrip-items > .k-state-active {
+        border-left: none !important;
+        border-right: none !important;
+        border-top: none !important;
+        border-bottom: 2px solid #009a5e !important;
+        transition: 0.5s;
+        span {
+            color: #009a5e !important;
+            transition: 0.5s;
+        }
+    }
+
+    // .btn.btn-primary:disabled {
+    //     // background-color: $swatch-400 !important;
+    //     // border-color: $swatch-400 !important;
+    // }
+
+    // .btn.btn-outline-primary:disabled {
+    //     // color: $swatch-400 !important;
+    //     // border-color: $swatch-400 !important;
+    // }
+
+    [role="tab"]:hover {
+        pointer-events: none;
+    }
+}
+
+// ================ Count Down =============================//
+
+.bg-gradient-4 {
+    background: #ffff;
+    background: -webkit-linear-gradient(right, #ffff, #ffff);
+    background: linear-gradient(to right, #ffff, #ffff);
+}
+
+@media (min-width: 768px) {
+    .countdown-dialog {
+        div[role="dialog"] {
+            max-width: 40vw !important;
+        }
+    }
+}
+
+.font-weight-bold {
+    font-weight: bold;
+    font-size: xx-large !important;
+}
+
+.textMuted {
+    font-weight: bold;
+    font-size: xx-large;
+}

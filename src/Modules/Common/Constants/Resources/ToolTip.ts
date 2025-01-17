@@ -1,0 +1,23 @@
+export default {
+    NTN: 'National Tax Number registered in FBR.',
+    Email: 'Email address registered with NTN should be active for verification and forwarding Login credentials.',
+    Email_FTN: 'Email address registered with FTN should be active for verification and forwarding Login credentials.',
+    CNIC: 'Please enter CNIC of Individual/Director/Partner for creation of PSW ID and for bio-metric verification.',
+    CNIC_FTN: 'Please enter CNIC of Individual/Director for creation of PSW ID and for bio-metric verification.',
+    Mobile: 'Mobile number registered with entered CNIC should be active for verification of ownership and TFA (Two Factor Authentication).',
+    MobileOTP: 'One time password that is received on entered Mobile number.',
+    EmailOTP: 'One time password that is received on email address as per FBR records.',
+    ApplicationId: 'Please note down Application ID for resumption of subscription application.',
+    BankEmail: 'Entered email address shall be registered in bank against the IBAN.',
+    BankMobile: 'Entered mobile number shall be registered in bank against the IBAN.',
+    Passport: 'Please enter Passport number of Director/Partner/Principal Officer for creation of PSW ID.',
+    ForeignMobile : 'Please enter active mobile number for TFA (Two Factor Authentication).',
+    UpdateProfile_PSID: 'Please note down Payment Slip ID for Update profile application.',
+    UpdateProfile_ApplicationId: 'Please note down Application ID for Update profile application.',
+    UpdateProfile_EMAIL: 'Email address registered as FBR record with NTN should be active for verification and forwarding Login credentials.',
+    UpdateProfile_NetworkProvider: 'Network provider type is select on the basis of cell number',
+    BankAccountVerificationToolTip:"Please complete your bank verification",
+    OTPVerificationToolTip:"Please verify your OTP verification",
+    PMDToolTip:"Please verify CNIC and Mobile number against your new CNIC/Mobile number",
+    BioMetricToolTip:"Please verify your Physical/Nadra verification"
+}

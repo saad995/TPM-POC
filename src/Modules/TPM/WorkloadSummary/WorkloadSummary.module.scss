@@ -1,0 +1,129 @@
+.displayImage {
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.cardProfile {
+    background: linear-gradient(
+            269.83deg,
+            rgba(89, 95, 138, 0) 0.16%,
+            rgba(89, 95, 138, 0.86) 47.97%,
+            rgba(89, 95, 138, 0) 99.87%
+        ),
+        url("../../../Assets/Images/pattern.png"), url("../../../Assets/Images/pattern.png"),
+        #595f8a;
+    width: 100%;
+    height: 70px;
+    border-radius: 4px 4px 0px 0px;
+    background-size: cover;
+}
+
+.imageAlign {
+    img{
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+        border-radius: 50%;
+    }
+    top: -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.displayImage {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.uploadInput{
+    input[type="file"] {
+        display: none;
+    }
+    
+    input {
+        border-radius: 15px;
+        border: 1px solid #b7b7b7;
+        padding: 5px 5px 5px 10px;
+        font-size: 18px;
+        transition: 0.2s;
+    }
+    
+    input:focus {
+        outline: none;
+        border: 1px solid #64d488;
+    }
+    
+    input::placeholder {
+        color: #bebebe;
+    }
+}
+
+
+
+.customFileUpload {
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    padding: 6px;
+    margin-bottom: 25px;
+}
+
+.imgWrap {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.uploadButton {
+    flex-direction: row;
+    font-size: 18px;
+    position: absolute;
+    padding-top: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.322);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.dashboardTitle
+{
+    color:#595f8a;
+    font-weight: 600;
+    font-size: medium !important;
+}
+
+.dashboardLink{
+    color: #009a5e;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 1rem !important;
+}
+
+
+.dashboardLink:hover{
+        cursor: pointer;
+}
+
+
+.divMinHeight {
+    min-height: 25.2rem !important;
+}

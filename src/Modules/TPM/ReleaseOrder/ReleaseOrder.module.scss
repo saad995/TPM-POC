@@ -1,0 +1,56 @@
+// Define all the global css styles that are local to Release Order
+// Author: Saad Siddiqui
+
+// Grids related to DPP
+.dppGrid {
+    :global {
+        .k-grid,
+        .k-pager {
+            border-radius: 0 0 4px 4px !important;
+        }
+
+        .k-grid {
+            td {
+                border-width: 0 0 1px 0px !important;
+                text-align: left !important;
+            }
+
+            th {
+                text-align: left !important;
+            }
+
+            table tr:hover td {
+                cursor: pointer !important;
+            }
+        }
+
+        .k-grid-toolbar {
+            padding: 0 !important;
+            border-width: 0 0 0px !important;
+            border-radius: 0.825rem 0.825rem 0 0 !important;
+            border-color: inherit;
+            background-color: #fff;
+            text-overflow: clip;
+            cursor: default;
+            display: block;
+        }
+
+        .k-toolbar:before {
+            content: "";
+            height: 0 !important;
+            margin-inline-start: 0.8 !important;
+            margin-bottom: 0% !important;
+            margin-left: 0% !important;
+            margin-right: 0% !important;
+        }
+        .yellow-dot {
+            color: #dcb038 !important;
+        }
+        .red-dot {
+            color: #dc3e38 !important;
+        }
+        .green-dot {
+            color: #14d489 !important;
+        }
+    }
+}

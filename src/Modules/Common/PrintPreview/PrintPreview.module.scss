@@ -1,0 +1,122 @@
+.sampleDialog {
+    text-align: center;
+
+    .mainHead {
+        color: #009a5e;
+        font-size: 18px !important;
+    }
+
+    .subHead {
+        color: #000;
+        font-size: 18px !important;
+    }
+}
+
+.popup {
+    :global {
+        .k-window-titlebar {
+            border: 0;
+            padding: 0.5rem 1rem;
+        }
+
+        .k-window-title {
+            color: #0000009e;
+            font-size: 14px;
+            background-color: #ffffff;
+        }
+
+        .k-dialog {
+            min-width: 35vw;
+            min-height: 90vh;
+            max-height: 90vh;
+        }
+
+        .k-dialog-content {
+            padding: 0 !important;
+            background-color: #343a40 !important;
+        }
+
+        .k-label {
+            color: #595959 !important;
+            font-size: 12px !important;
+        }
+
+        .k-input::placeholder {
+            font-size: 12px;
+        }
+
+        .k-window-actions {
+            display: none;
+        }
+    }
+}
+
+.noLineBreack {
+    p {
+        margin-top: -10px;
+    }
+}
+
+.swalCenter {
+    text-align: center;
+
+    .swal-footer {
+        text-align: center;
+    }
+}
+
+.swalColor {
+    background-color: #009a5e;
+    text-align: center;
+
+    :hover {
+        background-color: #038050;
+    }
+}
+
+%btn {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+}
+
+%btn-primary {
+    @extend %btn;
+    color: #ffffff;
+    background-color: #009a5e;
+    border-color: #009a5e;
+}
+
+.btnClose {
+    @extend %btn-primary;
+    margin: 0px;
+    align-items: center;
+    border-radius: 5px;
+    background-color: transparent;
+    border: none;
+    color: #009a5e;
+    padding: 0;
+}
+
+.preview {
+    background-color: #fff;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+
+    /*
+      Introduced in Internet Explorer 10.
+      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
+    padding: 10px;
+}

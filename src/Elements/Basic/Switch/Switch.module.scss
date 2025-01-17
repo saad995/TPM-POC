@@ -1,0 +1,42 @@
+.switch{
+
+    width: 31px !important;
+
+    .k-switch-container{
+        padding:unset !important;
+        width:30px !important;
+    }
+
+    .k-switch-handle{
+        width:15px !important;
+        height: 15px !important;
+        vertical-align: text-top !important;
+
+       
+    }
+    
+}
+
+.switch.k-switch-on{
+
+    .k-switch-container{
+        background-color: white !important;
+       
+    }
+
+    .k-switch-handle{
+        background-color: #009a5e !important;
+    }
+
+    .k-switch-handle{
+    left: calc(100% - 1.4em) !important;
+    }
+}
+
+.switch.k-switch-off{
+
+    .k-switch-container{
+        background-color: unset !important;
+        border: 1px solid white;
+    }
+}

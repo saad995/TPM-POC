@@ -1,0 +1,76 @@
+pipeline {
+	environment {
+        IMAGE_REPO_NAME = "dr-registry.psw.gov.pk:5000/${(env.JOB_NAME.tokenize('/') as String[])[0]}"
+        REPO_NAME = "${scm.getUserRemoteConfigs()[0].getUrl().tokenize('/').last().split("\\.")[0]}" //Repository name - must be a recognized parameter for Deployment job.
+    }
+    agent { label 'slave' }
+
+    stages {
+        stage('Figuring out the Committer') {
+               steps {
+                   echo "Figuring out the committer!"
+                   script {
+                         env.committerEmail = sh (
+                           script: 'git --no-pager show -s --format=\'%ae\'',
+                           returnStdout: true
+                           ).trim()
+                         println "Committer email is ${committerEmail}"
+                   }
+               }
+        }
+        stage('Pulling NPM Packages') {
+            steps {
+                sh "npm install"
+            }
+        }
+        stage('Removing Duplicate Packages') {
+            steps {
+                sh "npm dedupe" //this will clean the node_mudules of any confilcting duplicate packages.
+            }
+        }
+		stage('Building Project') {
+            steps {
+				sh "npm run build"
+            }
+        }
+        stage('Building Docker image') {
+			environment {
+                BUILD_IMAGE_REPO_TAG = "${env.IMAGE_REPO_NAME}:${env.BRANCH_NAME}-latest"
+            }
+            steps   {
+				sh "docker build -f Dockerfile.Jenkins . -t $BUILD_IMAGE_REPO_TAG --build-arg ARG_REACT_APP_WEBOC_SITE=https://test.weboc.gov.pk --network=host"
+                sh "docker tag $BUILD_IMAGE_REPO_TAG ${env.IMAGE_REPO_NAME}:${env.BRANCH_NAME}_$BUILD_NUMBER"
+			}
+		}
+		stage('Docker Push') {
+            environment {
+                BUILD_IMAGE_REPO_TAG = "${env.IMAGE_REPO_NAME}:${env.BRANCH_NAME}-latest"
+            }
+            steps {
+                    sh "docker push $BUILD_IMAGE_REPO_TAG"
+                    sh "docker push ${env.IMAGE_REPO_NAME}:${env.BRANCH_NAME}_$BUILD_NUMBER"
+            }
+        }
+        stage('SIT CD for Develop') {
+            when {
+                branch 'develop'    //This stage is only going to be executed for develop branch.
+            }
+            steps {
+                echo "CI was successful. Triggering deployment because this is develop branch!"
+                echo "The branch name is ${env.BRANCH_NAME}"
+                echo "The repository name is: ${env.REPO_NAME} and the service being triggered are $REPO_NAME,"
+                build job: 'On-Demand-SIT-Deployment', parameters: [string(name: 'Services', value: "$REPO_NAME,")]
+            }
+        }
+    }
+    post {
+        //In case of a entirely successful CI/CD cycle, the deployment email will be sent by the remote CD Job.
+        //In case the CI fails, an email will be sent out to the committer + DevOps.
+        failure {
+            echo "The committer email was: ${env.committerEmail}"
+            emailext to: "${env.committerEmail}, DevOps@psw.gov.pk", from: 'no-reply-jenkins@psw.gov.pk',
+                subject: "[Jenkins] Build failure email for ${env.JOB_NAME}",
+                body: "Job failed - \"${env.JOB_NAME}\" build: ${env.BUILD_NUMBER}\n\nView the log at:\n ${env.BUILD_URL}"
+         }
+    }
+}

@@ -1,14 +1,26 @@
-import React from 'react';
-import BankAccountHistory from './components/BankAccountHistory';
-import '@progress/kendo-theme-bootstrap/dist/all.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import LoaderComponent from "Elements/Basic/Loader/Loader";
+import React, { Suspense, useEffect } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import Routes from "./Routes";
+import config from "Config";
+const baseURL = config.baseURL;
 
 function App() {
-  return (
-    <div className="bg-light min-vh-100">
-      <BankAccountHistory />
-    </div>
-  );
+console.log("TPM App===", baseURL);
+
+// useEffect(() => {
+//     if(window.location.pathname.includes('tpm')){
+//         return window.location.reload();
+//     }
+//    },[]);
+
+    return (
+        <Router basename="/app">
+            <Suspense fallback={<LoaderComponent />}>
+                <Routes path={"/"} />
+            </Suspense>
+        </Router>
+    );
 }
 
 export default App;

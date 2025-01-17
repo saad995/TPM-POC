@@ -1,0 +1,18 @@
+// Define all the global css styles that are local to Import Permit
+// Author: Saad Siddiqui
+
+// Grids related to DPP
+
+.dppGrid {
+    :global {
+        .yellow-dot {
+            color: #dcb038 !important;
+        }
+        .red-dot {
+            color: #dc3e38 !important;
+        }
+        .green-dot {
+            color: #14d489 !important;
+        }
+    }
+}

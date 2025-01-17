@@ -1,0 +1,24 @@
+.k-list-optionlabel{
+    display:none !important;
+}
+
+.readonly-dropdown{
+    .k-dropdown{
+        width:100% !important;
+    }
+}
+
+.noPointer{
+    pointer-events: none;
+}
+.formWidth{
+    width:100%;
+}
+.label{
+    width: 100%;
+    align-items: flex-start;
+}
+.borderRadius > a{
+    border-radius: 0px;
+
+}

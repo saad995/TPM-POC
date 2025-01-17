@@ -1,0 +1,32 @@
+.ReportPrinter {
+    .csvDisabledButton {
+        background-color: #ced4da !important;
+        border-color: #ced4da !important;
+        color: #ffffff;
+        opacity: 0.65;
+        box-shadow: none;
+        pointer-events: none;
+    }
+
+}
+
+.searchBox {
+    .k-textbox {
+        width: 210px !important;
+    }
+
+    [class^="k-form-field"] {
+        margin: 0 !important;
+    }
+}
+
+.noCursorOnRow {
+    .k-grid {
+        border-left: none !important;
+        border-right: none !important;
+        table tr:hover td {
+            cursor: default !important;
+        }
+    }
+
+}

@@ -1,0 +1,24 @@
+.barErrorShow {
+    transform: translate(0,0);
+}
+
+.barErrorHide {
+    transform: translate(0,100px);
+    
+}
+
+.bar-error-styling {
+    display:none;
+    position: fixed;
+    width: 100%;
+    background: #f76060;
+    z-index: 999;
+    bottom: 0;
+    transition: 0.5s;
+    margin:auto;
+    padding: 20px 0;
+    p{
+        text-align:center;
+        color: white;
+    }
+}

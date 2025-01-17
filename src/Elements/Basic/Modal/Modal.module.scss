@@ -1,0 +1,83 @@
+.loader{
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+
+//Class for default modal
+.BasicModal{
+
+    :global{
+
+        //Class to remove padding from the modal
+        .k-window-content{
+            padding: 0 !important;
+            overflow: hidden !important;
+        }
+    
+        //Class to modify the modal title content
+        .k-window-title{
+            white-space: normal;
+            text-align: left;
+            margin-right: 10px;
+            color: gray;
+            // opacity: 0;
+         }
+
+         //CLass to modify the modal titlebar
+         .k-window-titlebar{
+            // border-style: none;
+            background: rgba(240, 240, 240, 0.39);
+         }
+
+         //Class to modify the action buttons on the modal
+         .k-dialog-buttongroup{
+
+            //Increase padding of each button
+            .k-button{
+                padding: 0.75rem 0;
+            }
+
+            //Make the the first button green
+            .k-button:first-child{
+                background: #009A5E;
+                color: white;
+            }
+
+            //Hover effect for the green button
+            .k-button:first-child:hover{
+                background: #028b50;
+            }
+            border-style: none;
+        }
+     
+        //Align and increase padding of internal modal content
+         .k-form .k-form-fieldset{
+             padding: 0 20px;
+             margin: 0 auto;
+            overflow: hidden;
+         }
+     
+         div[role=dialog]{
+             margin-left: 1rem;
+             margin-right: 1rem;
+             padding: 0;
+             box-shadow: 0px 4px 36px rgba(0, 0, 0, 0.2);
+             overflow: hidden;
+           
+         }
+    }
+
+  
+}
+
+
+
+// @media (min-width: 768px) {
+//     .BasicModal{
+//         div[role="dialog"] {
+//             max-width: 20vw !important;
+//         }
+//     }
+// }

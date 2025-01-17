@@ -1,6 +1,5 @@
-@import "@progress/kendo-theme-bootstrap/dist/all.scss";
-@import "bootstrap/scss/bootstrap.scss";
 @import "variables.scss";
+@import "~react-redux-toastr/src/styles/index";
 
 @font-face {
     font-family: "Montreal Regular";
@@ -40,94 +39,265 @@ body {
     font-family: "Proxima Regular" !important;
     color: #595959 !important;
     line-height: normal !important;
-
-    h1, h2, h3, h4, h5, h6 {
+    h1 {
+        // @include font-size($h1-font-size);
+        font-family: "Montreal Bold";
         margin-bottom: 0;
     }
-
-    h1 {
-        font-family: "Montreal Bold";
-    }
-
     h2 {
+        // @include font-size($h2-font-size);
         font-family: "Montreal Regular";
+        margin-bottom: 0;
     }
-
     h3 {
+        // @include font-size($h3-font-size);
         font-family: "Proxima Semibold";
+        margin-bottom: 0;
+    }
+    h4 {
+        // @include font-size($h4-font-size, true);
+        margin-bottom: 0;
+    }
+    h5 {
+        // @include font-size($h5-font-size, true);
+        margin-bottom: 0;
+    }
+    h6 {
+        // @include font-size($h6-font-size, true);
+        margin-bottom: 0;
     }
 
     .display-xl {
         font-family: "Montreal Bold";
         font-size: 80px !important;
+        margin-bottom: 0;
     }
 
     .display-lg {
         font-family: "Montreal Bold";
         font-size: 70px !important;
+        margin-bottom: 0;
     }
 
     .display-md {
         font-family: "Montreal Bold";
         font-size: 56px !important;
+        margin-bottom: 0;
     }
 
     .display-sm {
         font-family: "Montreal Bold";
         font-size: 42px !important;
+        margin-bottom: 0;
     }
 
     .headline {
         font-size: 24px !important;
         font-family: "Montreal Regular";
+        margin-bottom: 0;
     }
 
     .title {
         font-size: 1rem !important;
+        margin-bottom: 0;
     }
 
-    span, p, td {
+    .subtitle-bold {
+        font-size: 0.5rem !important;
+        font-family: "Proxima Semibold";
+        margin-bottom: 0;
+    }
+
+    .subtitle-regular {
+        font-size: 0.5rem !important;
+        margin-bottom: 0;
+    }
+
+    span,
+    p,
+    td {
+        
         font-size: 0.75rem !important;
+        margin-bottom: 0;
     }
 
     .base-lg {
         font-size: 0.875rem !important;
+        margin-bottom: 0;
     }
 
-    .btn, .k-textbox, .k-label, .k-button {
+    .btn,
+    .k-textbox,
+    .k-label,
+    .k-button {
         font-size: 0.75rem !important;
     }
+    .k-card{
+        font-family: unset;
+    }
+
+    hr {
+        margin-top: 0;
+    }
 }
 
-// Custom Grid Styles
-.purpleGrid {
-    .k-grid-header {
-        padding-right: 0 !important;
-        background-color: #3E5277;
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-size: 0.75rem;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    font-size: 0.75rem;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    font-size: 0.75rem;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+.text-ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+//Temporary Removing This
+// .rounded {
+//     border-radius: 1rem !important;
+// }
+
+//Making disabled primary button gray
+.btn.btn-primary:disabled {
+    background-color: $swatch-400 !important;
+    border-color: $swatch-400 !important;
+}
+
+.btn.btn-outline-primary:disabled {
+    color: $swatch-400 !important;
+    border-color: $swatch-400 !important;
+}
+
+.bg-default {
+    background-color: #f5f7fb;
+}
+
+.bg-white {
+    background-color: white;
+}
+.k-animation-container-shown {
+    z-index: 10003 !important;
+}
+
+.btn.btn-primary:disabled {
+    background-color: $swatch-400 !important;
+    border-color: $swatch-400 !important;
+}
+
+.btn.btn-outline-primary:disabled {
+    color: $swatch-400 !important;
+    border-color: $swatch-400 !important;
+}
+
+//Adding light font
+.font-weight-light {
+    font-family: "Proxima Light" !important;
+}
+
+.font-weight-bold {
+    font-family: "Montreal Regular" !important;
+}
+
+.font-semibold{
+    font-family: "Proxima SemiBold" !important;
+}
+
+//Changing cursor on hover
+.cursor-pointer:hover {
+    cursor: pointer;
+}
+
+.font-bolder {
+    font-weight: bold !important;
+}
+
+@media (min-width: 1600px){
+    ::placeholder {
+      
+        font-size: 0.875rem;
+      
+    }
+    
+    :-ms-input-placeholder {
+       
+        font-size: 0.875rem;
+    }
+    
+    ::-ms-input-placeholder {
+       
+        font-size: 0.875rem;
+    }
+
+    body {
+    
+        .title {
+            font-size: 1.25rem !important;
+            margin-bottom: 0;
+        }
+    
+        .subtitle-bold {
+            font-size: 0.75rem !important;
         
-        .k-header {
-            background-color: #3E5277;
-            color: white;
-            border-width: 0;
         }
-    }
-
-    .k-column-resizer {
-        background-color: #2D3F61;
-        width: 0.15em;
+    
+        .subtitle-regular {
+            font-size: 0.75rem !important;
+      
+        }
+    
+        span,
+        p,
+        td {
+            
+            font-size: 0.875rem !important;
+           
+        }
+    
+        .base-lg {
+            font-size: 1rem !important;
+           
+        }
+    
+        .btn,
+        .k-textbox,
+        .k-label,
+        .k-button {
+            font-size: 0.875rem !important;
+        }
+       
     }
 }
 
-.gridRound {
-    .k-grid {
-        border-radius: 5px;
+.bg-purple {
+    background-color: #516891;
+}
 
-        .k-grid-header .k-grid-header-wrap {
-            border-radius: 5px 5px 0px 0px;
-        }
 
-        .k-pager-wrap {
-            border-radius: 0px 0px 5px 5px;
-        }
-    }
+.text-purple {
+    color: #516891;
 }

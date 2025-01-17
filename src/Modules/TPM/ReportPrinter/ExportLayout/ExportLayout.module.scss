@@ -1,0 +1,27 @@
+.basicInfo {
+    p {
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        border-bottom: 1px solid #dee2e6;
+        font-size: 1rem !important;
+    }
+}
+
+.greyRow {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+    color: #212529;
+}
+
+.logo {
+    width: 145px;
+    // position: absolute;
+    // top: -8px;
+    // z-index: 1;
+    // height: auto;
+    // left: 0px;
+  }
+
+
+.btnExport {
+    padding: 10px 0 10px 0 !important;
+}

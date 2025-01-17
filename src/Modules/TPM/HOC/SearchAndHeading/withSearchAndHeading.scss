@@ -1,0 +1,39 @@
+/** Styling For Edit Action **/
+.cta-edit {
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    grid-area: main;    
+    z-index: 1;
+}
+
+.search-box {
+    position: relative;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #000;
+    z-index: 1;
+  }
+  
+  #search-input {
+    padding-left: 30px; /* Adjust the value as needed */
+    width: 200px;
+  }
+  
+  .container-fluid {
+    width: 100%;
+    
+  }
+
+  .k-tabstrip > .k-content.k-state-active {
+    display: flex;
+}

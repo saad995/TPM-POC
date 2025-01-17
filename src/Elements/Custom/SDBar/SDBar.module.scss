@@ -1,0 +1,40 @@
+
+
+
+.barContainer{
+    background-color: #3E5277;
+    min-height: 32px;
+    overflow-x: hidden; 
+}
+
+.itemIcon{
+    z-index: 1;
+}
+
+.dataHidden{
+    width: 0;
+    opacity: 0;
+    transition: width 0.35s ease-in-out, opacity 0.35s linear;
+}
+
+.dataLabel{
+    color:#CECECE;
+    overflow:hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+}
+
+.data{
+    overflow:hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+}
+
+.back{
+    background-color: #009A5E;
+    cursor: pointer;
+}
+
+.backIcon{
+    margin-right: 14px;
+}

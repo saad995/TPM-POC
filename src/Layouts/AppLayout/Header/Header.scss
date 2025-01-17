@@ -1,0 +1,201 @@
+.topbar-cont {
+    .dropdown-menu {
+        font-size: 0.75rem;
+    }
+
+    .role-toggler {
+        background-color: rgb(154, 175, 221) !important;
+        padding: 1rem;
+    }
+
+    .role-toggler:hover {
+        background-color: rgb(135, 156, 201) !important;
+    }
+
+    .role-toggler:focus {
+        background-color: rgb(135, 156, 201) !important;
+        -moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .role-toggler::after {
+        color: white;
+    }
+
+    .custom-divider {
+        margin: 0 !important;
+    }
+
+  .message-alert-menu{
+      .custom-divider:last-child{
+          display: none;
+      }
+  }
+
+  .alert-time{
+      font-size: 10px !important;
+  }
+
+  .alert-doctype{
+      width: 30px;
+  }
+
+    .message-alert-item:nth-of-type(1):hover{
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+    }
+
+    .message-alert-item:nth-last-of-type(1):hover{
+        border-bottom-left-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+    }
+
+    .dropdown-item:active {
+        background-color: white !important;
+        color: black !important;
+    }
+
+    .menu-toggle {
+        padding: 0;
+    }
+
+    .k-menu-vertical > .k-menu-item > .k-menu-link,
+    .k-menu.k-menu-vertical:not(.k-context-menu) {
+        padding: 0;
+    }
+
+    .k-menu:not(.k-context-menu) {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .k-menu:not(.k-context-menu) > .k-item {
+        color: black;
+    }
+
+    .menu-toggle,
+    .menu-toggle:hover,
+    .menu-toggle:active,
+    .menu-toggle:visited,
+    .menu-toggle:focus {
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
+
+    // [data-letters]:hover{
+    //     cursor: pointer;
+
+    // }
+
+    [data-letters]:before {
+        content: attr(data-letters);
+        display: inline-block;
+        text-align: center;
+        // background-color:rgb(154, 175, 221);
+        vertical-align: middle;
+        color: white;
+    }
+
+    // .dropdown {
+    //     .dropdown-toggle::after {
+    //         display: none;
+    //     }
+    //     .btn {
+    //         box-shadow: none;
+    //         background: none;
+    //         border: none;
+    //     }
+    //     .btn:hover {
+    //         background: none;
+    //         border: none;
+    //     }
+    //     .btn:active {
+    //         outline: none;
+    //         background: none;
+    //         border: none;
+    //     }
+    //     .btn:focus {
+    //         outline: none;
+    //         background: none;
+    //         border: none;
+    //     }
+    //     .btn:focus,
+    //     .btn:active {
+    //         outline: none !important;
+    //         box-shadow: none;
+    //     }
+    //     .dropdown-menu {
+    //         position: fixed !important;
+    //         width: 15%;
+    //     }
+    //     .dropdown-item {
+    //         white-space: nowrap;
+    //         overflow: hidden;
+    //         text-overflow: ellipsis;
+    //     }
+    // }
+
+    .fa-layers-counter {
+        right: -3px;
+        top: -12px;
+        transform: scale(0.7);
+    }
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu > a:after {
+    border-color: transparent transparent transparent #333;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    content: " ";
+    display: block;
+    float: right;
+    height: 0;
+    margin-right: -10px;
+    margin-top: 5px;
+    width: 0;
+}
+
+.dropdown-submenu:hover > a:after {
+    border-left-color: #555;
+}
+
+.dashboard-nav {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
+}
+
+.fa-layers-counter {
+    right: -5px;
+    top: -14px;
+    transform: scale(0.7);
+}
+.icon {
+    color: #5a5a5a;
+}
+
+.hideCloseIcon {
+    .k-i-close {
+        display: none !important;
+    }
+}

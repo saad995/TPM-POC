@@ -1,0 +1,28 @@
+.generalCommentsChip {
+    .k-chip-label {
+        font-size: 18px;
+    }
+
+    .k-icon {
+        color: #28a745;
+    }
+
+    .k-chip-filled.k-chip-disabled {
+        color: #bdbdbd !important;
+    }
+
+    .k-chip-filled.k-chip-success {
+        color: #28a745 !important;
+    }
+}
+
+.generalCommentsPanel {
+   
+    position: unset !important;
+
+    :global{
+        .react-multi-carousel-item{
+            width: unset !important;
+        }
+    }
+}

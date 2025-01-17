@@ -1,0 +1,8 @@
+//Alert Action Types
+export const ALERT_SUCCESS = "ALERT_SUCCESS";
+export const ALERT_ERROR = "ALERT_ERROR";
+export const ALERT_CLEAR = "ALERT_CLEAR";
+export const ALERT_INFO = "ALERT_INFO";
+export const MODAL_ALERT_SUCCESS = "MODAL_ALERT_SUCCESS";
+export const MODAL_ALERT_ERROR = "MODAL_ALERT_ERROR";
+export const MODAL_ALERT_CLEAR = "MODAL_ALERT_CLEAR";

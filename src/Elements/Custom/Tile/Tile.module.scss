@@ -1,0 +1,102 @@
+@import "variables.scss";
+
+.cardBlock {
+    max-width: 291;
+    width: 100%;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.tileHeader {
+    position: absolute !important;
+    background-color: $psw-header-bg !important;
+    height: 45px;
+    transition: all 0.35s;
+    left: 0;
+    right: 0;
+    color: "white";
+    cursor: pointer;
+    .createDeclaration {
+        color: white;
+        padding-right: 5%;
+        display: none;
+        opacity: 0;
+        transition: all 0.35s;
+    }
+    .underConstruction {
+        display: none;
+        opacity: 0;
+        transition: all 0.35s;
+    }
+}
+
+.bgDisable {
+    background-color: #e4e7eb !important;
+}
+.textDisable {
+    color: #6f7174;
+}
+:global {
+    .tab-active {
+        background-color: $psw-tab-active !important;
+    }
+}
+.tileSection {
+    cursor: pointer;
+}
+
+.tileSection:hover {
+    background-color: $psw-tab-active;
+    transition: all 0.35s;
+}
+
+.tileHeader:hover {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    transition: all 0.35s;
+    .tradeType {
+        position: absolute;
+        top: 35%;
+        // bottom: 50%;
+        // background-color:green;
+    }
+    .createDeclaration {
+        display: inline;
+        opacity: 1;
+        transition: all 0.35s;
+    }
+    .underConstruction {
+        color: #6f7174;
+        display: block;
+        opacity: 1;
+        transition: all 0.35s;
+        padding-bottom: 5%;
+    }
+}
+
+.tileBody {
+    margin-top: 45px;
+}
+
+.tileHeader:hover ~ .tileBody {
+    margin-top: 45px;
+}
+
+.vl {
+    border-left: 1px solid #6f7174;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+}
+
+.starIcon {
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6px !important;
+}
+.submitIcon {
+    white-space: nowrap;
+    justify-content: center;
+}

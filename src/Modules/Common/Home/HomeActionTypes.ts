@@ -1,0 +1,7 @@
+// Dashboard Action Types
+export const DASHBOARD_REQUEST = "DASHBOARD_REQUEST";
+export const DASHBOARD_FAILURE = "DASHBOARD_FAILURE";
+export const DASHBOARD_CLEAR_STATE = "DASHBOARD_CLEAR_STATE";
+
+// Dashboard Get Welcome Message Action Types
+export const GET_WELCOME_MESSAGE_SUCCESS = "GET_WELCOME_MESSAGE_SUCCESS";

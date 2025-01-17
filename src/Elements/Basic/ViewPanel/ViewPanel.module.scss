@@ -1,0 +1,67 @@
+.viewPanel {
+    background-color: white;
+    color: black;
+    box-shadow: #ebf0fa 0px 4px 8px;
+}
+.changeColorGreen {
+    // color: #d1391e !important;
+}
+
+.viewPanelHeading {
+    color: #3e5277;
+    letter-spacing: 0.01rem;
+    font-size: 0.875rem !important;
+}
+
+.lastItem {
+    padding-bottom: 1rem;
+}
+.dottedBorder {
+    border-bottom: 1px dashed #bcbec0;
+}
+
+.dottedBorderDisableXs {
+    border-bottom: none !important ;
+}
+
+@media (min-width: 1200px) {
+    .dottedBorderDisableXl {
+        border-bottom: none !important ;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .dottedBorderDisableLg {
+        border-bottom: none !important ;
+    }
+}
+
+@media (min-width: 768px) {
+    .dottedBorderDisableMd {
+        border-bottom: none !important ;
+    }
+}
+
+@media (min-width: 526px) {
+    .dottedBorderDisableSm {
+        border-bottom: none !important ;
+    }
+}
+
+.custom_tooltip {
+    background-color: #ffff;
+    color: #000;
+    font-weight: lighter;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40;
+    padding-right: 40;
+  }
+
+  .custom-grid {
+    width: 70% !important;
+    margin: 0 auto;
+}

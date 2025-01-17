@@ -1,0 +1,36 @@
+.numbered-section-heading {
+    color: $numbered-section-heading-color;
+    display: inline;
+   
+    position: relative;
+    
+    margin-left: 0.25rem;
+}
+
+.num-head-container{
+    display:inherit;
+}
+
+.number{
+    border: 1px solid rgba(0, 0, 0, 0.45);
+    text-align: center;
+    min-width: 28px;
+    min-height: 28px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+.digit{
+    position: relative;
+   
+    color: $sub-text-color;
+}
+
+.line{
+    border-bottom:1px solid rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 768px) {
+
+}

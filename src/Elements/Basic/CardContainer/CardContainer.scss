@@ -1,0 +1,149 @@
+%DefaultCard {
+    width: 100%;
+    transition: 0.5s;
+    cursor:pointer;
+}
+
+.Card {
+    @extend %DefaultCard;
+    height: auto;
+    border-width: 2px !important;
+    position:relative;
+
+    .CardBody {
+        padding: 0 !important;
+       
+        .p2 {
+            font-family: "Proxima Regular" !important;
+            margin-bottom: 0.1rem;
+        }
+        p {
+            font-family: "Proxima Light" !important;  
+            color: rgba(0, 0, 0, 0.65);
+           
+        }
+    }
+
+}
+
+.CardwText {
+    @extend %DefaultCard;
+    height: auto;
+    border-width: 2px !important;
+
+    .CardBody {
+        padding: 0 !important;
+       
+        h5 {
+            font-family: "Proxima Regular" !important; 
+            font-size:16px !important;
+            color: rgba(0, 0, 0, 0.70) !important;
+           
+        }
+    }
+
+}
+
+.Card:hover {
+    @extend %DefaultCard;
+    border: 2px solid #009a5e !important;
+    box-shadow: 0px 0px 9px rgba(66, 66, 66, 0.44);
+    .card-icon{
+        fill: #009a5e;
+    }
+    
+    transform: scale(1.03, 1.03);
+}
+
+
+.CardSelected {
+    @extend %DefaultCard;
+    border: 2px solid #009a5e !important;
+    box-shadow: 0px 0px 9px rgba(66, 66, 66, 0.44);
+}
+
+.CardScaleUp {
+    transform: scale(1.07, 1.07);
+}
+
+.CardContainer > div:nth-child(odd) {
+   margin-bottom: 0.5rem;
+}
+
+.CardContainer > div:nth-child(even) {
+    margin-bottom: 0.5rem;
+}
+
+.CardImage {
+    height: auto;
+    width: 100% !important;
+    max-width: 70px;
+    min-width: 55px;
+}
+
+.card-disable{
+    background-color: lightgray !important;
+}
+
+.extra-space{
+    margin: auto 0;
+}
+
+.go-icon{
+    position:absolute;
+    left:48%;
+    bottom:-120px;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+@media (min-width: 768px) {
+
+    
+    .Card{
+        min-height: 152px;
+    }
+   
+}
+
+@media (min-width: 992px) { 
+    .Card:hover {
+       
+        .go-icon{
+            opacity: 100;
+            bottom:-50%;
+        }
+       
+    }
+
+    .Card{
+    .CardBody {
+        text-align: center;
+        p {
+            max-width: 350px;
+            margin: 0 auto;
+        }
+    }
+}
+ }
+
+@media (min-width: 1300px) {
+
+    .Card{
+    .extra-space {
+        margin-top:2vh;
+        margin-bottom:2vh;
+    }
+}
+}
+
+@media (min-width: 1600px) {
+
+    .Card{
+    .extra-space {
+        margin-top:3vh;
+        margin-bottom:3vh;
+    }
+    }
+   
+}

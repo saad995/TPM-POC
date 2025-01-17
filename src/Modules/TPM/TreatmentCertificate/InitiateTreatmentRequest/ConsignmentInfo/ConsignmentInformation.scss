@@ -1,0 +1,35 @@
+.k-input {
+    background-color: #ffff;
+    border: 1px solid lightgrey;
+}
+
+.custom-row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+    margin: 10px;
+}
+
+.custom-col {
+    .k-form-field {
+        margin-right: 50px;
+    }
+}
+
+.form-style {
+    .k-form-field {
+    margin-top: 0 !important;
+    }
+}
+
+label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+// .k-input {
+//     color: grey;
+// }

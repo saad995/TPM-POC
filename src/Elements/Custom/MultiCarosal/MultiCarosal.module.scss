@@ -1,0 +1,17 @@
+.obsedianBG{
+    background-color: #595F8A;
+     color: white; 
+}
+
+.carouselBtn{
+    visibility: hidden;
+    
+}
+
+
+
+.carousel:hover{
+    .carouselBtn{
+        visibility: visible;
+    }
+}

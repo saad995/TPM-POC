@@ -1,0 +1,56 @@
+{
+    "subscription": {
+        "subscriptionType": {
+            "pageTitle": "Subscription Type",
+            "subTitle": "Please select Subscription Type as per your requirements.",
+            "linkText": "Click here to cancel the subscription process.",
+            "buttonText": "Proceed"
+        },
+        "subscriptionInformation": {},
+        "createPassword": {
+            "pageTitle": "Create Password",
+            "subTitle": "Please create your password to login.",
+            "passwordValidationMessage": "Please enter password between 6 and 16 characters!",
+            "confirmPasswordValidationMessage": "Passwords do not match!",
+            "info1": "User ID",
+            "passwordName": "password",
+            "passwordLabel": "Password",
+            "confirmPasswordName": "confirmPassword",
+            "confirmPasswordLabel": "Confirm Password",
+            "buttonText": "Create Password"
+        },
+        "subscriptionFee": {
+            "pageTitle": "Payment & Biometric Verification",
+            "subTitle": "Please use the below mentioned PSID to pay the subscription fees to continuoue with the process",
+            "info1": "For Biometric Verification Please Visit your nearest NADRA E Saulat Center with any one of the CNIC(s) mentioned below along with your application ID",
+            "info2": "Failing to do above mentioned procedures within the due date will result in re-initiating the subscription process from the beginning.",
+            "info3": "Link to this application has been sent on the provided email address & cell number.",
+            "info4": "The application process can be resumed or proceeded furthur after successful payment and biometric verification.",
+            "linkText": "Click Here to resend the application link.",
+            "heading_PSID": "Paymen Slip ID (PSID)",
+            "heading_subscriptionFees": "Subscription Fees",
+            "heading_applicationID": "Application ID",
+            "heading_dueDate": "Due Date",
+            "heading_CNICs": "CNICs",
+            "heading_paymentStatus": "Payment Status",
+            "heading_biometricStatus": "Biometric Status",
+            "buttonText": "Print Slip"
+        },
+        "subscriptionFetch": {
+            "fetchModal_title": "Fetch Application",
+            "fetchModal_confirmMsg": "Resume subscription",
+            "fetchModal_message": "Please enter a valid application ID inorder to resume the subscription process",
+            "pageTitle": "Welcome to PSW Subscription",
+            "subTitle": "Please select an option below.",
+            "fetchCard_1_title": "I have an application ID",
+            "fetchCard_1_subtitle": "Provide the application ID to resume from a particular subscription stage.",
+
+            "fetchCard_2_title": "I am a new subscriber",
+            "fetchCard_2_subtitle": "Start a new subscription application. Note the application ID given for future use.",
+
+            "buttonText": "Proceed",
+            "linkText_1": "Click here",
+            "linkText_2": "to cancel the subscription process."
+        }
+    }
+}
